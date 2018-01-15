@@ -1,0 +1,21 @@
+
+<div class="jumbotron">
+  <h1>Programming Community Blog</h1>
+</div>
+
+<div class="row">
+  <% site.posts.forEach(function(post){ %>
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <img src="<%- post.img_url %>" alt="">
+      <div class="caption">
+        <h3><a href="<%- post.path%>"><%- post.title%></a></h3>
+        <p><%- post.content.substring(0,100); %>...</p>
+        <p><%- post.date %></p>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</div>
+
+
